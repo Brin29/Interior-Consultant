@@ -1,0 +1,329 @@
+:root{
+    --bg-color-fondo:rgba(24, 23, 25, 1);
+    --text-color:#ffffff;
+    --subtext-color:rgba(130, 130, 130, 1);
+    --footer-text-color:rgba(169, 169, 169, 1);
+
+}
+/* Estilos globales */
+*{ /*Librerias de fonts*/
+    font-family: 'Crimson Pro', serif;        
+    font-family: 'Lora', serif;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: var(--bg-color-fondo);
+    color:var(--text-color);
+    /* Fue mejor darle el estilo al body */
+}
+/* La barra de navegacion */
+
+.navbar{
+    /* Layouts */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    /* Tamaños */
+    height:80px;
+    width:100%;
+    max-width:1900px;
+    /* Centrar el contenido */
+    margin: 0  auto;
+    font-size:18px;
+}
+.nav-interior-boton{
+    /* Logo  */
+    margin-left:77px;
+}
+/* Listas */
+.nav-list-container{
+    display:flex;
+    gap:86px;
+    margin-right:76px;
+    list-style:none;
+}
+.nav-list-container a{
+    color:#fff;
+    font-size:18px;
+    text-decoration:none;
+    font-weight:500;
+    position: relative;
+    padding-bottom:5px;
+}
+/* btn logo */
+.navbar > a{
+    color:#fff;
+    font-family: 'Crimson Pro', serif; 
+    font-size:14px;
+    text-decoration:none;
+    font-weight:200;
+    text-transform:uppercase;
+    padding:8px;
+    border:1px solid #fff;
+}  
+/* Linea de abajo */
+.nav-list-container a.home-line::after,
+.nav-list-container a:hover::after{
+    background-color:#fff;
+    content:"";
+    position:absolute;
+    left:0;
+    height:2px;
+    width:100%;
+    bottom:0;
+} 
+/* Menu hamburguesa */
+.toggle-menu, 
+/* X icon */
+.close-icon{
+    /* Se quita */
+    display:none;
+    margin-right:20px;
+}
+
+.toggle-menu:hover,
+.close-icon:hover{
+    cursor: pointer;
+}
+/* MAIN */
+
+.contenedor-informacion-principal{
+    display:grid;
+    grid-template-columns:repeat(1, 1fr 2fr);
+    margin-top:150px;
+    margin-left:67px;
+    margin-right:66px;
+}
+.titulo{
+    font-family: 'Lora', serif;
+    font-size:38px;
+    font-weight:lighter;
+    margin-bottom:40px;
+    margin-top:130px;
+    width:80%;
+    min-width:20px;
+}
+.parrafo{
+    width:80%;
+    min-width:100px;
+    max-width:340px;
+    font-family: 'Montserrat', sans-serif;
+    font-size:20px;
+    font-weight:400;
+    margin-bottom:46px;
+}
+.icono{
+    position: relative;
+    top:6px;
+}
+.enlaceparrafo{
+    color:var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size:18px;
+    font-weight:700;
+    text-decoration:none;
+}
+.enlaceparrafo:hover{
+    text-decoration:underline;
+}
+.position-relative{
+    position: relative;
+    display:grid;
+}
+.imagen{
+    width:100%;
+    height:586px;
+    min-width:580px;
+    max-width:721px;
+    /* Para que empuje el elemento */
+    margin-left:auto;
+    position: relative;
+}
+.contenedor-texto{
+    background-color:var(--bg-color-fondo);
+    width:50%;
+    max-width:410px;
+    min-width:296px;
+    height:180px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding-left:24px;
+    padding-top:20px;
+    box-shadow:0 3px 4px rgba(0, 0, 0, 0.193);
+    position:relative;
+    bottom:70px;
+    left:45%;
+    margin-left:10px;
+
+}
+.information{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:8px;
+}
+.container-contact{
+    display:flex;
+    gap:20px;
+}
+.perfil{
+    width:55px;
+    border-radius:50%;
+    margin-left:8px;
+}
+.nombre{
+    font-family: 'Montserrat', sans-serif;
+    font-size:14px;
+    font-weight:500;
+}
+.profesion{
+    color:var(--subtext-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size:12px;
+    font-weight:500;
+}
+.informacion{
+    width:270px;
+    font-family: 'Lora', serif;
+    font-size:24px;
+    font-weight:700;
+}
+.footer-container{
+    text-align:center;
+    margin-bottom:15px;
+}
+.footer-text,
+.footer-text > a{
+    color:var(--footer-text-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size:14px;
+    font-weight:500;
+}
+.footer-text > a{
+    font-weight:700;
+}
+@media (max-width:988px){
+    .navbar{
+        /* El texto se hace mas pequeño */
+        font-size:5px;
+    }
+    .nav-interior-boton{
+        /* El logo se pega un poco a la izquierda */
+        margin-left:20px;
+    }
+    .nav-list-container{
+        /* Los navs se pegan y se hacen mas pequeños */
+        margin-right:40px;
+        font-size:20px;
+        gap:30px;
+    }
+    .contenedor-informacion-principal{
+        grid-template-columns:1fr;
+        margin-left:20px;
+        margin-top:38px;
+    }
+    .titulo{
+        margin-top:0;
+    }
+    .parrafo{
+        width:100%;
+        max-width:none;
+        margin-bottom:20px;
+    }
+    br{
+        display:none;
+    }
+    .enlaceparrafo{
+        display:inline-block;
+        margin-bottom:25px;
+
+    }
+    .imagen{
+        margin:0 auto;
+        width:100%;
+        max-width:650px;
+        min-width:580px;
+    }
+    .contenedor-texto{
+        width:400px;
+        max-width:none;
+        left:20%;
+    }
+
+}
+@media (max-width:660px){
+    /* Estilos del nav en tamaño mas pequeño */
+    .nav-list-container{
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        /* Centrado */
+        margin: 0 auto;
+        background-color:var(--bg-color-fondo);
+        position:fixed;
+        /* Pegados del position */
+        top:0;
+        left:100%;/*Va a estar completamente pegado a la derecha lo cual hace que no se vea*/
+        width:100vw;/*Ancho toda la pantalla*/
+        height:100vh;/*Alto toda la pantalla*/
+        overflow-y:auto;/*Controla el Scroll*/
+        transition: left .4s;/*Transicion para cuando se mueva*/
+        z-index:100;
+    }
+    /* La x que esta pegada con la lista */
+    .close-icon{
+        display:block;
+        position:absolute;
+        top:20px;
+        right:20px;
+        margin-right:10px;
+    }
+    /* El menu se muestra cuando se cumple el mediaquerie */
+    .toggle-menu{
+        display:block;
+    }
+    /* Para que se muestre el menu */
+    .nav-list-container_visible{
+        left:0;
+    }
+    .titulo{
+        font-size:36px;
+    }
+    br{
+        display:block;
+    }
+    .parrafo{
+        width:340px;
+        font-size:24px;
+    }
+    .enlaceparrafo{
+        font-size:14px;
+    }
+    .imagen{
+        width:100px;
+        min-width:none;
+        max-width:none;
+        height:482px;
+    }
+    .contenedor-texto{
+        width:300px;
+    }
+    .perfil{
+        width:62px;
+    }
+    .nombre{
+        width:133px;
+        font-size:15px;
+    }
+    .profesion{
+        width:142px;
+        font-size:13px;
+    }
+    .informacion{
+        font-size:18px;
+    }
+}
